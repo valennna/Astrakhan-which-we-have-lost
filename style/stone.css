@@ -1,0 +1,247 @@
+@font-face {
+    font-family: "MAK";
+    font-style: normal;
+    font-weight: 400;
+  
+    src: local("MAK"),
+         url("/font/Mak/MAK.otf") format("otf");
+  }
+  @font-face {
+    font-family: "MAK";
+    font-style: normal;
+    font-weight: 700;
+  
+    src: local("MAK"),
+         url("/font/Mak/MAK-bold.otf") format("otf");
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+  
+    src: local("Roboto"),
+         url("/font/Roboto/Roboto-Regular.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+  
+    src: local("Roboto"),
+         url("/font/Roboto/Roboto-Bold.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+  
+    src: local("Roboto"),
+         url("/font/Roboto/Roboto-Thin.woff") format("woff");
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #262526;
+    font-family: 'MAK', sans-serif;
+    font-weight: 400;
+}
+
+.home {
+    overflow: hidden;
+}
+
+/* menu */
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+.logo, .menu__item{
+    padding-left: 108px;
+    padding-right: 108px;
+    padding-top: 40px;
+}
+.logo a{
+    color: #B3ADB3;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: 'MAK', sans-serif;
+    font-weight: 400;
+}
+.menu__item{
+    display: flex;
+    font-family: 'MAK', sans-serif;
+    font-weight: 400;
+}
+.link__project{
+    padding-right: 60px;
+}
+.menu__item a{
+    color: #B3ADB3;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+
+
+#js-scroll {
+    height: 200%;
+}
+
+/* project section */
+
+.stone__container {
+    width: 70%;
+    margin: 100px auto;
+    /* border: 1px solid #5c5c5c; */
+    color: #fff;
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.stone__container__title h1{
+    color: #fff;
+    font-size: 100px;
+    font-family: 'MAK', sans-serif;
+    font-weight: 400;
+}
+.stone__container__title{
+    margin-top: 50px;
+}
+.stone__container__images {
+    position: relative;
+    width: 100%;
+    height: 1400px;
+    padding: 130px 0;
+}
+
+.stone__image {
+    background: red;
+    margin: 40px auto;
+}
+
+.stone__image__one {
+    width: 750px;
+    height: 500px;
+    background: url(../img/11.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.stone__image__two {
+    width: 380px;
+    height: 510px;
+    position: relative;
+    top: -240px;
+    left: -638px;
+    background: url(../img/22.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.stone__image__three {
+    width: 664px;
+    height: 720px;
+    position: relative;
+    top: -520px;
+    left: 495px;
+    background: url(../img/33.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.stone__image__four {
+    width: 810px;
+    height: 530px;
+    position: relative;
+    top: -1100px;
+    left: -424px;
+    background: url(../img/44.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+
+.stone__next__link {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stone__next__link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 100px;
+    font-family: 'MAK', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+}
+
+.anime__js__title .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+@media(max-width: 900px) {
+    .stone__container__title h1 {
+        font-size: 40px;
+    }
+
+    .stone__container {
+        width: 80%;
+    }
+
+    .stone__container__images {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .stone__image {
+        width: 90%;
+    }
+
+    .stone__image__one, .stone__image__two, .stone__image__three, .stone__image__four {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* cursor */
+
+
+.inner__cursor{
+    position: fixed;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background-color: #B3ADB3;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+}
+.inner__cursor.grow{
+    width: 60px;
+    height: 60px;
+    transition: width 0.5s, height 0.5s;
+}
+.outer__cursor{
+    position: fixed;
+    left: 60px;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.1s;
+}
